@@ -2,10 +2,11 @@
   "name": "interstellar-iron",
   "type": "module",
   "version": "0.0.1",
+  "packageManager": "bun@1.0.35",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
+    "dev": "bun run astro dev",
+    "build": "bun run astro build",
+    "preview": "bun run astro preview",
     "astro": "astro"
   },
   "dependencies": {
