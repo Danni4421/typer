@@ -1,0 +1,10 @@
+{
+  "buildCommand": "bun run build",
+  "outputDirectory": "dist",
+  "framework": "astro",
+  "env": {
+    "APP_PUBLIC_API_URL": "@app_public_api_url",
+    "APP_API_URL": "@app_api_url",
+    "PUBLIC_APP_PUBLIC_API_URL": "@app_public_api_url"
+  }
+}

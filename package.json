@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "bun run astro dev",
     "build": "bun run astro build",
+    "build:verbose": "bun run astro build --verbose",
+    "build:debug": "DEBUG=* bun run astro build",
     "preview": "bun run astro preview",
     "astro": "astro"
   },
