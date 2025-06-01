@@ -1,6 +1,16 @@
 {
   "buildCommand": "bun run build",
   "outputDirectory": "dist",
+  "installCommand": "bun install",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1",
+      "headers": {
+        "Cache-Control": "public, max-age=0, must-revalidate"
+      }
+    }
+  ],
   "framework": "astro",
   "env": {
     "APP_PUBLIC_API_URL": "@app_public_api_url",
