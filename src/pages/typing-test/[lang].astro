@@ -1,0 +1,18 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { pub } from "../../lib/http";
+import type { Language } from "../../types/index";
+
+export async function getStaticPaths() {
+  const languages = await pub.get("/languages");
+  return (
+    languages.data.data?.map((lang: Language) => ({
+      params: { lang: lang.code.toLowerCase() },
+    })) || []
+  );
+}
+
+const { lang } = Astro.params;
+---
+
+<Layout lang={lang} />
